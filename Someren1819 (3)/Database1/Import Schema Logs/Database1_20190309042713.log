@@ -1,0 +1,85 @@
+9-3-2019 17:27:13	This log contains information about the import schema operation into project 'Database1' on computer 'DESKTOP-HH11HM2' by user 'Hayo'.
+9-3-2019 17:27:13	Import of database schema has started.
+9-3-2019 17:27:30	Gathering database credentials
+9-3-2019 17:27:30	Gathering database options
+9-3-2019 17:27:30	Gathering generic database scoped configuration option
+9-3-2019 17:27:30	Gathering users
+9-3-2019 17:27:30	Gathering roles
+9-3-2019 17:27:30	Gathering application roles
+9-3-2019 17:27:30	Gathering role memberships
+9-3-2019 17:27:30	Gathering filegroups
+9-3-2019 17:27:30	Gathering full-text catalogs
+9-3-2019 17:27:30	Gathering assemblies
+9-3-2019 17:27:30	Gathering certificates
+9-3-2019 17:27:30	Gathering asymmetric keys
+9-3-2019 17:27:30	Gathering symmetric keys
+9-3-2019 17:27:30	Gathering encrypted symmetric keys
+9-3-2019 17:27:30	Gathering schemas
+9-3-2019 17:27:30	Gathering XML schema collections
+9-3-2019 17:27:30	Gathering user-defined data types
+9-3-2019 17:27:30	Gathering user-defined types
+9-3-2019 17:27:30	Gathering table types
+9-3-2019 17:27:30	Gathering unique keys for table types
+9-3-2019 17:27:30	Gathering primary keys for table types
+9-3-2019 17:27:30	Gathering indexes for table types
+9-3-2019 17:27:30	Gathering check constraints for table types
+9-3-2019 17:27:30	Gathering default constraints for table types
+9-3-2019 17:27:30	Gathering partition functions
+9-3-2019 17:27:30	Gathering partition schemes
+9-3-2019 17:27:30	Gathering functions
+9-3-2019 17:27:30	Gathering encrypted functions
+9-3-2019 17:27:30	Gathering aggregates
+9-3-2019 17:27:30	Gathering procedures
+9-3-2019 17:27:30	Gathering encrypted procedures
+9-3-2019 17:27:30	Gathering tables
+9-3-2019 17:27:30	Gathering primary keys
+9-3-2019 17:27:30	Gathering unique constraints
+9-3-2019 17:27:30	Gathering foreign keys
+9-3-2019 17:27:30	Gathering default constraints
+9-3-2019 17:27:30	Gathering check constraints
+9-3-2019 17:27:30	Gathering views
+9-3-2019 17:27:30	Gathering encrypted views
+9-3-2019 17:27:30	Gathering indexes
+9-3-2019 17:27:30	Gathering statistics
+9-3-2019 17:27:30	Gathering full-text index stoplists
+9-3-2019 17:27:30	Gathering search property lists
+9-3-2019 17:27:30	Gathering search properties
+9-3-2019 17:27:30	Gathering full-text indexes
+9-3-2019 17:27:30	Gathering column store indexes
+9-3-2019 17:27:30	Gathering spatial indexes
+9-3-2019 17:27:30	Gathering XML indexes
+9-3-2019 17:27:30	Gathering Selective XML indexes
+9-3-2019 17:27:30	Gathering encrypted triggers
+9-3-2019 17:27:30	Gathering triggers
+9-3-2019 17:27:30	Gathering encrypted and clr ddl triggers
+9-3-2019 17:27:30	Gathering ddl triggers
+9-3-2019 17:27:30	Gathering synonyms
+9-3-2019 17:27:30	Gathering defaults
+9-3-2019 17:27:30	Gathering data constraint uddt bindings
+9-3-2019 17:27:30	Gathering rules
+9-3-2019 17:27:30	Gathering data constraint uddt bindings
+9-3-2019 17:27:30	Gathering message types
+9-3-2019 17:27:30	Gathering queues
+9-3-2019 17:27:30	Gathering contracts
+9-3-2019 17:27:30	Gathering services
+9-3-2019 17:27:30	Gathering event notifications
+9-3-2019 17:27:30	Gathering remote service bindings
+9-3-2019 17:27:30	Gathering broker priorities
+9-3-2019 17:27:30	Gathering signatures
+9-3-2019 17:27:30	Gathering data compression options
+9-3-2019 17:27:30	Gathering sequence types
+9-3-2019 17:27:30	Gathering security policies
+9-3-2019 17:27:30	Gather column encryption keys
+9-3-2019 17:27:30	Gathering column master keys
+9-3-2019 17:27:30	Gathering external data sources
+9-3-2019 17:27:30	Gathering external file formats
+9-3-2019 17:27:30	Gathering external tables
+9-3-2019 17:27:30	Gathering extended properties
+9-3-2019 17:27:34	Gathering credentials
+9-3-2019 17:27:34	Gathering logins
+9-3-2019 17:27:34	Gathering server audits
+9-3-2019 17:27:36	Scanning project for duplicate elements
+9-3-2019 17:27:36	Finished duplicate element processing
+9-3-2019 17:27:36	Finished importing database.
+9-3-2019 17:27:36	A summary of the import was saved to the following location: H:\School\School\Someren1819\Database1\Import Schema Logs\Database1_20190309042713.log
+9-3-2019 17:27:36	Click Finish to continue...
