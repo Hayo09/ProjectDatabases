@@ -36,6 +36,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Voorraad.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -48,6 +49,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Voorraad.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -81,6 +83,7 @@ namespace SomerenUI
                 pnl_Dashboard.Hide();
                 img_Dashboard.Hide();
                 pnl_Rooms.Hide();
+                pnl_Voorraad.Hide();
 
                 pnl_Teachers.Show();
 
@@ -105,6 +108,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Teachers.Hide();
                 pnl_Students.Hide();
+                pnl_Voorraad.Hide();
 
                 pnl_Rooms.Show();
 
@@ -128,6 +132,16 @@ namespace SomerenUI
 
 
                 }
+            }
+            else if (panelName == "Voorraad")
+            {
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Teachers.Hide();
+                pnl_Students.Hide();
+                pnl_Rooms.Hide();
+
+                pnl_Voorraad.Show();
             }
         }
 
@@ -174,6 +188,16 @@ namespace SomerenUI
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Rooms");
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void voorraadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Voorraad");
         }
     }
 }
