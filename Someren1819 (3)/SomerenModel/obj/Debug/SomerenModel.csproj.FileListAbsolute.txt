@@ -26,3 +26,9 @@ C:\Git\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReferen
 C:\Git\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
 C:\Git\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.dll
 C:\Git\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\bin\Debug\SomerenModel.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\bin\Debug\SomerenModel.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.pdb

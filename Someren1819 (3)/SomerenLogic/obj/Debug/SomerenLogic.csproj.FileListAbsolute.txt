@@ -52,3 +52,15 @@ C:\Git\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInp
 C:\Git\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Git\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Git\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenLogic.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenLogic.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenModel.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenModel.pdb
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.dll
+H:\School\School\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.pdb
