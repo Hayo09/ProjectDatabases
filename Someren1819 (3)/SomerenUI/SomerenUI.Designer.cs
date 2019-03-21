@@ -62,14 +62,18 @@
             this.KamerType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_Rooms = new System.Windows.Forms.Label();
-            this.voorraadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnl_Voorraad = new System.Windows.Forms.Panel();
-            this.listViewVoorraad = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.barDienstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drankvoorraadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.omzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnl_Drankvoorraad = new System.Windows.Forms.Panel();
+            this.listViewDrankvoorraad = new System.Windows.Forms.ListView();
+            this.Drankje_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrankjeNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VerkoopPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblVoorraad = new System.Windows.Forms.Label();
+            this.lbl_Drankvoorraad = new System.Windows.Forms.Label();
+            this.Voorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
@@ -79,7 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_Rooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.pnl_Voorraad.SuspendLayout();
+            this.pnl_Drankvoorraad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,13 +105,13 @@
             this.studentsToolStripMenuItem,
             this.lecturersToolStripMenuItem,
             this.activitiesToolStripMenuItem,
+            this.barDienstToolStripMenuItem,
             this.roomsToolStripMenuItem,
-            this.teachersToolStripMenuItem,
-            this.voorraadToolStripMenuItem});
+            this.teachersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(2565, 58);
+            this.menuStrip1.Size = new System.Drawing.Size(2565, 55);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -178,10 +182,10 @@
             // 
             this.pnl_Dashboard.Controls.Add(this.lbl_Dashboard);
             this.pnl_Dashboard.Controls.Add(this.img_Dashboard);
-            this.pnl_Dashboard.Location = new System.Drawing.Point(32, 64);
+            this.pnl_Dashboard.Location = new System.Drawing.Point(32, 57);
             this.pnl_Dashboard.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.pnl_Dashboard.Name = "pnl_Dashboard";
-            this.pnl_Dashboard.Size = new System.Drawing.Size(2501, 1111);
+            this.pnl_Dashboard.Size = new System.Drawing.Size(2501, 1118);
             this.pnl_Dashboard.TabIndex = 2;
             // 
             // lbl_Dashboard
@@ -200,10 +204,10 @@
             this.pnl_Students.Controls.Add(this.listViewStudents);
             this.pnl_Students.Controls.Add(this.pictureBox1);
             this.pnl_Students.Controls.Add(this.lbl_Students);
-            this.pnl_Students.Location = new System.Drawing.Point(32, 62);
+            this.pnl_Students.Location = new System.Drawing.Point(32, 57);
             this.pnl_Students.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.pnl_Students.Name = "pnl_Students";
-            this.pnl_Students.Size = new System.Drawing.Size(2501, 1106);
+            this.pnl_Students.Size = new System.Drawing.Size(2501, 1111);
             this.pnl_Students.TabIndex = 4;
             // 
             // listViewStudents
@@ -261,10 +265,10 @@
             this.pnl_Teachers.Controls.Add(this.listViewTeachers);
             this.pnl_Teachers.Controls.Add(this.pictureBox2);
             this.pnl_Teachers.Controls.Add(this.lbl_Teachers);
-            this.pnl_Teachers.Location = new System.Drawing.Point(32, 62);
+            this.pnl_Teachers.Location = new System.Drawing.Point(32, 213);
             this.pnl_Teachers.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.pnl_Teachers.Name = "pnl_Teachers";
-            this.pnl_Teachers.Size = new System.Drawing.Size(2501, 1106);
+            this.pnl_Teachers.Size = new System.Drawing.Size(2501, 955);
             this.pnl_Teachers.TabIndex = 6;
             // 
             // listViewTeachers
@@ -312,14 +316,13 @@
             // 
             // pnl_Rooms
             // 
-            this.pnl_Rooms.Controls.Add(this.pnl_Voorraad);
             this.pnl_Rooms.Controls.Add(this.listViewRooms);
             this.pnl_Rooms.Controls.Add(this.pictureBox3);
             this.pnl_Rooms.Controls.Add(this.lbl_Rooms);
-            this.pnl_Rooms.Location = new System.Drawing.Point(32, 62);
+            this.pnl_Rooms.Location = new System.Drawing.Point(32, 57);
             this.pnl_Rooms.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.pnl_Rooms.Name = "pnl_Rooms";
-            this.pnl_Rooms.Size = new System.Drawing.Size(2501, 1106);
+            this.pnl_Rooms.Size = new System.Drawing.Size(2501, 1111);
             this.pnl_Rooms.TabIndex = 7;
             // 
             // listViewRooms
@@ -369,48 +372,74 @@
             this.lbl_Rooms.TabIndex = 3;
             this.lbl_Rooms.Text = "Rooms";
             // 
-            // voorraadToolStripMenuItem
+            // barDienstToolStripMenuItem
             // 
-            this.voorraadToolStripMenuItem.Name = "voorraadToolStripMenuItem";
-            this.voorraadToolStripMenuItem.Size = new System.Drawing.Size(151, 48);
-            this.voorraadToolStripMenuItem.Text = "Voorraad";
-            this.voorraadToolStripMenuItem.Click += new System.EventHandler(this.voorraadToolStripMenuItem_Click);
+            this.barDienstToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.drankvoorraadToolStripMenuItem,
+            this.kassaToolStripMenuItem,
+            this.omzetrapportageToolStripMenuItem});
+            this.barDienstToolStripMenuItem.Name = "barDienstToolStripMenuItem";
+            this.barDienstToolStripMenuItem.Size = new System.Drawing.Size(153, 48);
+            this.barDienstToolStripMenuItem.Text = "Bardienst";
+            this.barDienstToolStripMenuItem.Click += new System.EventHandler(this.voorraadToolStripMenuItem_Click);
             // 
-            // pnl_Voorraad
+            // drankvoorraadToolStripMenuItem
             // 
-            this.pnl_Voorraad.Controls.Add(this.listViewVoorraad);
-            this.pnl_Voorraad.Controls.Add(this.pictureBox4);
-            this.pnl_Voorraad.Controls.Add(this.lblVoorraad);
-            this.pnl_Voorraad.Location = new System.Drawing.Point(8, 0);
-            this.pnl_Voorraad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.pnl_Voorraad.Name = "pnl_Voorraad";
-            this.pnl_Voorraad.Size = new System.Drawing.Size(2501, 1114);
-            this.pnl_Voorraad.TabIndex = 8;
+            this.drankvoorraadToolStripMenuItem.Name = "drankvoorraadToolStripMenuItem";
+            this.drankvoorraadToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.drankvoorraadToolStripMenuItem.Text = "Drankvoorraad";
+            this.drankvoorraadToolStripMenuItem.Click += new System.EventHandler(this.drankvoorraadToolStripMenuItem_Click);
             // 
-            // listViewVoorraad
+            // kassaToolStripMenuItem
             // 
-            this.listViewVoorraad.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listViewVoorraad.Location = new System.Drawing.Point(43, 100);
-            this.listViewVoorraad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.listViewVoorraad.Name = "listViewVoorraad";
-            this.listViewVoorraad.Size = new System.Drawing.Size(2036, 727);
-            this.listViewVoorraad.TabIndex = 5;
-            this.listViewVoorraad.UseCompatibleStateImageBehavior = false;
+            this.kassaToolStripMenuItem.Name = "kassaToolStripMenuItem";
+            this.kassaToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.kassaToolStripMenuItem.Text = "Kassa";
             // 
-            // columnHeader1
+            // omzetrapportageToolStripMenuItem
             // 
-            this.columnHeader1.Text = "ID";
+            this.omzetrapportageToolStripMenuItem.Name = "omzetrapportageToolStripMenuItem";
+            this.omzetrapportageToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.omzetrapportageToolStripMenuItem.Text = "Omzetrapportage";
             // 
-            // columnHeader2
+            // pnl_Drankvoorraad
             // 
-            this.columnHeader2.Text = "Capaciteit";
+            this.pnl_Drankvoorraad.Controls.Add(this.listViewDrankvoorraad);
+            this.pnl_Drankvoorraad.Controls.Add(this.pictureBox4);
+            this.pnl_Drankvoorraad.Controls.Add(this.lbl_Drankvoorraad);
+            this.pnl_Drankvoorraad.Location = new System.Drawing.Point(32, 57);
+            this.pnl_Drankvoorraad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.pnl_Drankvoorraad.Name = "pnl_Drankvoorraad";
+            this.pnl_Drankvoorraad.Size = new System.Drawing.Size(2501, 1014);
+            this.pnl_Drankvoorraad.TabIndex = 6;
             // 
-            // columnHeader3
+            // listViewDrankvoorraad
             // 
-            this.columnHeader3.Text = "Type";
+            this.listViewDrankvoorraad.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Drankje_ID,
+            this.DrankjeNaam,
+            this.VerkoopPrijs,
+            this.Voorraad});
+            this.listViewDrankvoorraad.Location = new System.Drawing.Point(43, 100);
+            this.listViewDrankvoorraad.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.listViewDrankvoorraad.Name = "listViewDrankvoorraad";
+            this.listViewDrankvoorraad.Size = new System.Drawing.Size(2036, 727);
+            this.listViewDrankvoorraad.TabIndex = 5;
+            this.listViewDrankvoorraad.UseCompatibleStateImageBehavior = false;
+            // 
+            // Drankje_ID
+            // 
+            this.Drankje_ID.Text = "ID";
+            // 
+            // DrankjeNaam
+            // 
+            this.DrankjeNaam.Text = "Naam";
+            this.DrankjeNaam.Width = 110;
+            // 
+            // VerkoopPrijs
+            // 
+            this.VerkoopPrijs.Text = "Prijs";
+            this.VerkoopPrijs.Width = 100;
             // 
             // pictureBox4
             // 
@@ -423,23 +452,27 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // lblVoorraad
+            // lbl_Drankvoorraad
             // 
-            this.lblVoorraad.AutoSize = true;
-            this.lblVoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoorraad.Location = new System.Drawing.Point(27, 24);
-            this.lblVoorraad.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblVoorraad.Name = "lblVoorraad";
-            this.lblVoorraad.Size = new System.Drawing.Size(264, 65);
-            this.lblVoorraad.TabIndex = 3;
-            this.lblVoorraad.Text = "Voorraad";
-            this.lblVoorraad.Click += new System.EventHandler(this.label1_Click_1);
+            this.lbl_Drankvoorraad.AutoSize = true;
+            this.lbl_Drankvoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Drankvoorraad.Location = new System.Drawing.Point(27, 24);
+            this.lbl_Drankvoorraad.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lbl_Drankvoorraad.Name = "lbl_Drankvoorraad";
+            this.lbl_Drankvoorraad.Size = new System.Drawing.Size(408, 65);
+            this.lbl_Drankvoorraad.TabIndex = 3;
+            this.lbl_Drankvoorraad.Text = "Drankvoorraad";
+            // 
+            // Voorraad
+            // 
+            this.Voorraad.Text = "Voorraad";
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2565, 1061);
+            this.Controls.Add(this.pnl_Drankvoorraad);
             this.Controls.Add(this.pnl_Rooms);
             this.Controls.Add(this.pnl_Teachers);
             this.Controls.Add(this.pnl_Students);
@@ -466,8 +499,8 @@
             this.pnl_Rooms.ResumeLayout(false);
             this.pnl_Rooms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.pnl_Voorraad.ResumeLayout(false);
-            this.pnl_Voorraad.PerformLayout();
+            this.pnl_Drankvoorraad.ResumeLayout(false);
+            this.pnl_Drankvoorraad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -509,14 +542,18 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_Rooms;
         private System.Windows.Forms.ColumnHeader KamerType;
-        private System.Windows.Forms.ToolStripMenuItem voorraadToolStripMenuItem;
-        private System.Windows.Forms.Panel pnl_Voorraad;
-        private System.Windows.Forms.ListView listViewVoorraad;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ToolStripMenuItem barDienstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drankvoorraadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kassaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem omzetrapportageToolStripMenuItem;
+        private System.Windows.Forms.Panel pnl_Drankvoorraad;
+        private System.Windows.Forms.ListView listViewDrankvoorraad;
+        private System.Windows.Forms.ColumnHeader Drankje_ID;
+        private System.Windows.Forms.ColumnHeader DrankjeNaam;
+        private System.Windows.Forms.ColumnHeader VerkoopPrijs;
+        private System.Windows.Forms.ColumnHeader Voorraad;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lblVoorraad;
+        private System.Windows.Forms.Label lbl_Drankvoorraad;
     }
 }
 

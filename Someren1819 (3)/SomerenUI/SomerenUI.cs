@@ -36,7 +36,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
-                pnl_Voorraad.Hide();
+                pnl_Drankvoorraad.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -49,7 +49,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
-                pnl_Voorraad.Hide();
+                pnl_Drankvoorraad.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -83,7 +83,7 @@ namespace SomerenUI
                 pnl_Dashboard.Hide();
                 img_Dashboard.Hide();
                 pnl_Rooms.Hide();
-                pnl_Voorraad.Hide();
+                pnl_Drankvoorraad.Hide();
 
                 pnl_Teachers.Show();
 
@@ -108,7 +108,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Teachers.Hide();
                 pnl_Students.Hide();
-                pnl_Voorraad.Hide();
+                pnl_Drankvoorraad.Hide();
 
                 pnl_Rooms.Show();
 
@@ -133,15 +133,32 @@ namespace SomerenUI
 
                 }
             }
-            else if (panelName == "Voorraad")
+            else if (panelName == "Drankvoorraad")
             {
                 pnl_Dashboard.Hide();
                 img_Dashboard.Hide();
                 pnl_Teachers.Hide();
-                pnl_Students.Hide();
                 pnl_Rooms.Hide();
+                pnl_Students.Hide();
 
-                pnl_Voorraad.Show();
+                pnl_Drankvoorraad.Show();
+
+                SomerenLogic.Drankje_Service drankjeService = new SomerenLogic.Drankje_Service();
+                List<Drankje> drankjeList = drankjeService.GetDrankjes();
+
+                listViewDrankvoorraad.Items.Clear();
+
+                listViewDrankvoorraad.View = View.Details;
+
+                foreach (SomerenModel.Drankje d in drankjeList)
+                {
+
+                    ListViewItem dr = new ListViewItem(d.Drankjes_ID.ToString());
+                    dr.SubItems.Add(d.DrankjeNaam);
+                    dr.SubItems.Add(d.DrankjePrijs.ToString());
+                    dr.SubItems.Add(d.Voorraad.ToString());
+                    listViewDrankvoorraad.Items.Add(dr);
+                }
             }
         }
 
@@ -197,7 +214,12 @@ namespace SomerenUI
 
         private void voorraadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showPanel("Voorraad");
+            
+        }
+
+        private void drankvoorraadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Drankvoorraad");
         }
     }
 }
