@@ -506,9 +506,9 @@
             this.pnl_veranderVoorraad.Controls.Add(this.lbl_NieuweVoorraad);
             this.pnl_veranderVoorraad.Controls.Add(this.txtDrankID);
             this.pnl_veranderVoorraad.Controls.Add(this.lbl_GeefDrankID);
-            this.pnl_veranderVoorraad.Location = new System.Drawing.Point(32, 58);
+            this.pnl_veranderVoorraad.Location = new System.Drawing.Point(968, 58);
             this.pnl_veranderVoorraad.Name = "pnl_veranderVoorraad";
-            this.pnl_veranderVoorraad.Size = new System.Drawing.Size(2501, 1013);
+            this.pnl_veranderVoorraad.Size = new System.Drawing.Size(1565, 1013);
             this.pnl_veranderVoorraad.TabIndex = 8;
             // 
             // lbl_GeefDrankID

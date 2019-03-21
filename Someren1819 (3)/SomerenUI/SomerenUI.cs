@@ -173,7 +173,7 @@ namespace SomerenUI
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Students.Hide();
-                pnl_Drankvoorraad.Hide();
+                pnl_Drankvoorraad.Show();
 
                 pnl_veranderVoorraad.Show();
 
@@ -252,6 +252,8 @@ namespace SomerenUI
 
             SomerenLogic.Drankje_Service drankjeService = new SomerenLogic.Drankje_Service();
             drankjeService.ChangeVoorraad(drankjeID, drankjeVoorraad);
+
+            showPanel("Drankvoorraad");
         }
 
         private void lbl_veranderen_Click(object sender, EventArgs e)
