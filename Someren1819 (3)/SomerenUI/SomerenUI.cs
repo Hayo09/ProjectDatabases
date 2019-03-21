@@ -37,6 +37,7 @@ namespace SomerenUI
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Drankvoorraad.Hide();
+                pnl_veranderVoorraad.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -50,6 +51,7 @@ namespace SomerenUI
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Drankvoorraad.Hide();
+                pnl_veranderVoorraad.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -84,6 +86,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Rooms.Hide();
                 pnl_Drankvoorraad.Hide();
+                pnl_veranderVoorraad.Hide();
 
                 pnl_Teachers.Show();
 
@@ -109,6 +112,7 @@ namespace SomerenUI
                 pnl_Teachers.Hide();
                 pnl_Students.Hide();
                 pnl_Drankvoorraad.Hide();
+                pnl_veranderVoorraad.Hide();
 
                 pnl_Rooms.Show();
 
@@ -140,6 +144,7 @@ namespace SomerenUI
                 pnl_Teachers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Students.Hide();
+                pnl_veranderVoorraad.Hide();
 
                 pnl_Drankvoorraad.Show();
 
@@ -159,6 +164,20 @@ namespace SomerenUI
                     dr.SubItems.Add(d.Voorraad.ToString());
                     listViewDrankvoorraad.Items.Add(dr);
                 }
+                
+            }
+            else if(panelName == "WijzigDrankvoorraad")
+            {
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Teachers.Hide();
+                pnl_Rooms.Hide();
+                pnl_Students.Hide();
+                pnl_Drankvoorraad.Hide();
+
+                pnl_veranderVoorraad.Show();
+
+
             }
         }
 
@@ -220,6 +239,24 @@ namespace SomerenUI
         private void drankvoorraadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Drankvoorraad");
+        }
+
+        private void btn_wijzigDrankvoorraad_Click(object sender, EventArgs e)
+        {
+            showPanel("WijzigDrankvoorraad");
+        }
+        private void btnVerander_Click(object sender, EventArgs e)
+        {
+            int drankjeID = int.Parse(txtDrankID.Text);
+            int drankjeVoorraad = int.Parse(txtDrankjeVoorraad.Text);
+
+            SomerenLogic.Drankje_Service drankjeService = new SomerenLogic.Drankje_Service();
+            drankjeService.ChangeVoorraad(drankjeID, drankjeVoorraad);
+        }
+
+        private void lbl_veranderen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

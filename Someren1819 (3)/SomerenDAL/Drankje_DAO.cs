@@ -35,5 +35,11 @@ namespace SomerenDAL
             }
             return drankjes;
         }
+        public void ChangeVoorraad(int drankjeID, int drankjeVoorraad)
+        {
+            string query = "UPDATE Drankje SET Voorraad = " + drankjeVoorraad + " WHERE Drankjes_ID = " + drankjeID;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

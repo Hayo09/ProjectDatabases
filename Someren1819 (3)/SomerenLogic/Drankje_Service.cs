@@ -16,7 +16,22 @@ namespace SomerenLogic
         public List<Drankje> GetDrankjes()
         {
             List<Drankje> drankje = drankje_db.Db_Get_Drankjes();
+            foreach(Drankje d in drankje)
+            {
+                if(d.Voorraad >= 10)
+                {
+                    d.DrankjeNaam = d.DrankjeNaam + " ✓";
+                }
+                else
+                {
+                    d.DrankjeNaam = d.DrankjeNaam + " ✘";
+                }
+            }
             return drankje;
+        }
+        public void ChangeVoorraad(int drankjeID, int drankjeVoorraad)
+        {
+            drankje_db.ChangeVoorraad(drankjeID, drankjeVoorraad);
         }
 
     }
