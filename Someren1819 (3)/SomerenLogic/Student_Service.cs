@@ -39,5 +39,11 @@ namespace SomerenLogic
             }
 
         }
+
+        public Student GetStudentByName(string naam)
+        {
+            Student student = student_db.Db_Get_Student_By_Name(naam);
+            return student;
+        }
     }
 }

@@ -29,6 +29,19 @@ namespace SomerenLogic
             }
             return drankje;
         }
+
+        public List<Drankje> GetAllDrankjes()
+        {
+            List<Drankje> drankjes = drankje_db.Db_Get_All_Drankjes();
+            return drankjes;
+        }
+
+        public Drankje GetDrankjeByName(string naam)
+        {
+            Drankje drankje = drankje_db.Db_Get_Drankje_By_Name(naam);
+            return drankje;
+        }
+
         public void ChangeVoorraad(int drankjeID, int drankjeVoorraad)
         {
             drankje_db.ChangeVoorraad(drankjeID, drankjeVoorraad);
