@@ -38,3 +38,9 @@ C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\De
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.dll
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenModel\obj\Debug\SomerenModel.pdb

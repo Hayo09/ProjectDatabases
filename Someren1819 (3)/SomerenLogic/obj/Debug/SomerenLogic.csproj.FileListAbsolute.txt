@@ -76,3 +76,15 @@ C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\De
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\romde\Source\Repos\ProjectDatabases\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\alex_\source\repos\Project_Database\Someren1819 (3)\SomerenLogic\obj\Debug\SomerenLogic.pdb
