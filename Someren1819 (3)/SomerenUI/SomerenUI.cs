@@ -39,6 +39,7 @@ namespace SomerenUI
                 pnl_Drankvoorraad.Hide();
                 pnl_veranderVoorraad.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -54,6 +55,7 @@ namespace SomerenUI
                 pnl_Drankvoorraad.Hide();
                 pnl_veranderVoorraad.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -90,6 +92,7 @@ namespace SomerenUI
                 pnl_Drankvoorraad.Hide();
                 pnl_veranderVoorraad.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_Teachers.Show();
 
@@ -117,6 +120,7 @@ namespace SomerenUI
                 pnl_Drankvoorraad.Hide();
                 pnl_veranderVoorraad.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_Rooms.Show();
 
@@ -150,6 +154,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_veranderVoorraad.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_Drankvoorraad.Show();
 
@@ -180,6 +185,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Drankvoorraad.Show();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_veranderVoorraad.Show();
 
@@ -196,6 +202,7 @@ namespace SomerenUI
                 pnl_veranderVoorraad.Hide();
                 pnl_Students.Hide();
                 listViewKassa2.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 // show students
                 pnl_Kassa.Show();
@@ -229,6 +236,21 @@ namespace SomerenUI
 
                     listViewKassa2.Items.Add(ldk);
                 }
+            }
+            else if (panelName == "Omzetrapportage")
+            {
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Teachers.Hide();
+                pnl_Rooms.Hide();
+                pnl_Students.Hide();
+                pnl_Drankvoorraad.Hide();
+                pnl_Kassa.Hide();
+                pnl_veranderVoorraad.Hide();
+
+                pnl_Omzetrapportage.Show();
+
+
             }
         }
 
@@ -388,6 +410,37 @@ namespace SomerenUI
             {
                 MessageBox.Show("Please enter a student");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_Omzet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Omzetrapportage_Click(object sender, EventArgs e)
+        {
+            string begin = mocal_Begin.ToString();
+            string eind = mocal_Eind.ToString();
+
+            SomerenLogic.Omzetrapportage_Service omzetrapportageService = new SomerenLogic.Omzetrapportage_Service();
+
+            omzetrapportageService.Afzet(begin, eind);
+            omzetrapportageService.Omzet(begin, eind);
+            omzetrapportageService.AantalKlanten(begin, eind);
+
+            lbl_Afzet.Text = omzetrapportageService.afzet.ToString();
+            lbl_Omzet.Text = omzetrapportageService.omzet.ToString();
+            lbl_AantalKlanten.Text = omzetrapportageService.aantalKlanten.ToString();
+        }
+
+        private void omzetrapportageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Omzetrapportage");
         }
     }
 }
