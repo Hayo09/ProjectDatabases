@@ -424,18 +424,35 @@ namespace SomerenUI
 
         private void btn_Omzetrapportage_Click(object sender, EventArgs e)
         {
-            string begin = mocal_Begin.ToString();
-            string eind = mocal_Eind.ToString();
+            string begin = mocal_Begin.SelectionRange.Start.ToShortDateString();
+            string eind = mocal_Eind.SelectionRange.Start.ToShortDateString();
 
-            SomerenLogic.Omzetrapportage_Service omzetrapportageService = new SomerenLogic.Omzetrapportage_Service();
+            DateTime start = Convert.ToDateTime(begin);
+            DateTime stop = Convert.ToDateTime(eind);
 
-            omzetrapportageService.Afzet(begin, eind);
-            omzetrapportageService.Omzet(begin, eind);
-            omzetrapportageService.AantalKlanten(begin, eind);
+            int result = DateTime.Compare(start, stop);
 
-            lbl_Afzet.Text = omzetrapportageService.afzet.ToString();
-            lbl_Omzet.Text = omzetrapportageService.omzet.ToString();
-            lbl_AantalKlanten.Text = omzetrapportageService.aantalKlanten.ToString();
+            if (result > 0)
+            {
+                lbl_Correct.Text = "Verkeerde invoer, probeer het opnieuw!";
+                lbl_Afzet.Text = "";
+                lbl_Omzet.Text = "";
+                lbl_AantalKlanten.Text = "";
+            }
+            else
+            {
+                lbl_Correct.Text = "";
+
+                SomerenLogic.Omzetrapportage_Service omzetrapportageService = new SomerenLogic.Omzetrapportage_Service();
+
+                omzetrapportageService.Afzet(begin, eind);
+                omzetrapportageService.Omzet(begin, eind);
+                omzetrapportageService.AantalKlanten(begin, eind);
+
+                lbl_Afzet.Text = omzetrapportageService.afzet.ToString();
+                lbl_Omzet.Text = omzetrapportageService.omzet.ToString();
+                lbl_AantalKlanten.Text = omzetrapportageService.aantalKlanten.ToString();
+            }
         }
 
         private void omzetrapportageToolStripMenuItem_Click(object sender, EventArgs e)
