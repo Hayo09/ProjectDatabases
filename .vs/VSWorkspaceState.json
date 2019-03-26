@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Someren1819 (3)"
+    "\\Someren1819 (3)",
+    "\\Someren1819 (3)\\SomerenDAL",
+    "\\Someren1819 (3)\\SomerenLogic",
+    "\\Someren1819 (3)\\SomerenModel",
+    "\\Someren1819 (3)\\SomerenUI"
   ],
   "SelectedNode": "\\Someren1819 (3)\\Someren1819.sln",
   "PreviewInSolutionExplorer": false

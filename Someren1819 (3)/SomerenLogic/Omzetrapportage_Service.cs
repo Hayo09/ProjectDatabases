@@ -16,33 +16,43 @@ namespace SomerenLogic
         public int omzet = 0;
         public int aantalKlanten = 0;
 
-        public List<Omzetrapportage> Afzet(string begin, string eind)
+        public List<Omzetrapportage> Afzet(DateTime begin, DateTime eind)
         {
-            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AfzetOmzet(begin, eind);
+            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AfzetOmzet();
             
             foreach(Omzetrapportage o in omzetrapportage)
             {
-                afzet += o.Aantal;
+                DateTime verkoopdatum = DateTime.Parse(o.VerkoopDatumDrankje);
+                if (verkoopdatum >= begin && verkoopdatum <= eind)
+                {
+                    afzet += o.Aantal;
+                }
+                
             }
 
             return omzetrapportage;
         }
 
-        public List<Omzetrapportage> Omzet(string begin, string eind)
+        public List<Omzetrapportage> Omzet(DateTime begin, DateTime eind)
         {
-            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AfzetOmzet(begin, eind);
+            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AfzetOmzet();
 
             foreach (Omzetrapportage o in omzetrapportage)
             {
-                omzet += (o.Aantal * o.VerkoopPrijs);
+                DateTime verkoopdatum = DateTime.Parse(o.VerkoopDatumDrankje);
+                if (verkoopdatum >= begin && verkoopdatum <= eind)
+                {
+                    omzet += (o.Aantal * o.VerkoopPrijs);
+                }
+                
             }
 
             return omzetrapportage;
         }
 
-        public List<Omzetrapportage> AantalKlanten(string begin, string eind)
+        public List<Omzetrapportage> AantalKlanten(DateTime begin, DateTime eind)
         {
-            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AantalKlanten(begin, eind);
+            List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AantalKlanten();
 
             aantalKlanten = omzetrapportage.Count();
 
