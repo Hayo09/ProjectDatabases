@@ -21,6 +21,12 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
+        public void UpdateVoorraad(Transactie transactie)
+        {
+            string query = "UPDatE Drankje SET Voorraad -= 1 WHERE Drankjes_ID = '" + transactie.GewenstDrankje.Drankjes_ID+ "'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
     }
 }
