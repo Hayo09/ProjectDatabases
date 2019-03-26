@@ -105,9 +105,17 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Teacher t in teacherList)
                 {
-
+                    
                     ListViewItem ti = new ListViewItem(t.Number.ToString());
                     ti.SubItems.Add(t.Name);
+                    if (t.Begeleidt == true)
+                    {
+                        ti.SubItems.Add("wel");
+                    }
+                    else
+                    {
+                        ti.SubItems.Add("niet");
+                    }
                     listViewTeachers.Items.Add(ti);
                 }
             }
@@ -381,6 +389,7 @@ namespace SomerenUI
                         Student = student
                     };
                     transactieService.InstertTransactie(transactie);
+                    transactieService.UpdateVoorraad(transactie);
                 }
                 showPanel("Kassa");
             }

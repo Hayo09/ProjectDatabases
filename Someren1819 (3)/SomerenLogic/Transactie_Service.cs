@@ -17,5 +17,9 @@ namespace SomerenLogic
         {
             transactie_db.InsertTransactie(transactie);
         }
+        public void UpdateVoorraad(Transactie transactie)
+        {
+            transactie_db.UpdateVoorraad(transactie);
+        }
     }
 }
