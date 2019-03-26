@@ -13,5 +13,6 @@ namespace SomerenModel
         public int Aantal { get; set; }
         public int VerkoopPrijs { get; set; }
         public int transactieID { get; set; }
+        public string VerkoopDatumDrankje { get; set; }
     }
 }

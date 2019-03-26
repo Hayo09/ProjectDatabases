@@ -10,5 +10,10 @@ namespace SomerenModel
     {
         public Student Student { get; set; }
         public Drankje GewenstDrankje { get; set; }
+        public DateTime VerkoopDatum { get; set; }
+        public Transactie()
+        {
+            VerkoopDatum = DateTime.Now.Date;
+        }
     }
 }

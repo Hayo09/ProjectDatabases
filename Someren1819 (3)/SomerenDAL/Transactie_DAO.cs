@@ -16,7 +16,8 @@ namespace SomerenDAL
         
         public void InsertTransactie(Transactie transactie)
         {
-            string query = "INSERT INTO Consumeert(StudentNummer, Drankjes_ID, Aantal) VALUES('" + transactie.Student.Number + "', '" + transactie.GewenstDrankje.Drankjes_ID + "', '1')";
+            string datum = transactie.VerkoopDatum.ToShortDateString();
+            string query = "INSERT INTO Consumeert(StudentNummer, Drankjes_ID, Aantal, VerkoopDatum) VALUES('" + transactie.Student.Number + "', '" + transactie.GewenstDrankje.Drankjes_ID + "', '1', '"+ datum+ "')";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

@@ -12,18 +12,16 @@ namespace SomerenDAL
 {
     public class Omzetrapportage_DAO : Base
     {
-        public List<Omzetrapportage> Db_AfzetOmzet(string begin, string eind)
+        public List<Omzetrapportage> Db_AfzetOmzet()
         {
-            string query = "SELECT C.StudentNummer, C.Drankjes_ID, C.Aantal, C.VerkoopDatum, D.VerkoopPrijs FROM Consumeert AS C JOIN Drankje AS D ON C.Drankjes_ID = D.Drankjes_ID " +
-                "WHERE VerkoopDatum >= " + begin + " AND VerkoopDatum <= " + eind; 
+            string query = "SELECT C.StudentNummer, C.Drankjes_ID, C.Aantal, C.VerkoopDatum, D.VerkoopPrijs FROM Consumeert AS C JOIN Drankje AS D ON C.Drankjes_ID = D.Drankjes_ID "; 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Omzetrapportage> Db_AantalKlanten(string begin, string eind)
+        public List<Omzetrapportage> Db_AantalKlanten()
         {
-            string query = "SELECT S.StudentNummer, C.Transactie_ID FROM Student AS S JOIN Consumeert AS C ON S.studentNummer = C.StudentNummer " +
-                "WHERE VerkoopDatum >= " + begin + " AND VerkoopDatum <= " + eind + " AND Transactie_ID IS NOT NULL"; 
+            string query = "SELECT S.StudentNummer, C.Transactie_ID FROM Student AS S JOIN Consumeert AS C ON S.studentNummer = C.StudentNummer "; 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -39,7 +37,8 @@ namespace SomerenDAL
                     StudentNummer = (int)dr["StudentNummer"],
                     DrankjeID = (int)dr["Drankjes_ID"],
                     Aantal = (int)dr["Aantal"],
-                    VerkoopPrijs = (int)dr["VerkoopPrijs"]
+                    VerkoopPrijs = (int)dr["VerkoopPrijs"],
+                    VerkoopDatumDrankje = (string)dr["VerkoopDatum"]
                 };
                 omzetrapportage.Add(omzetrapport);
             }
@@ -55,7 +54,9 @@ namespace SomerenDAL
                 Omzetrapportage omzetrapport = new Omzetrapportage()
                 {
                     StudentNummer = (int)dr["StudentNummer"],
-                    transactieID = (int)dr["Transactie_ID"]
+                    transactieID = (int)dr["Transactie_ID"],
+
+
                 };
                 omzetrapportage.Add(omzetrapport);
             }

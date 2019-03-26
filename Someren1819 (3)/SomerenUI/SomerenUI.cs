@@ -445,9 +445,9 @@ namespace SomerenUI
 
                 SomerenLogic.Omzetrapportage_Service omzetrapportageService = new SomerenLogic.Omzetrapportage_Service();
 
-                omzetrapportageService.Afzet(begin, eind);
-                omzetrapportageService.Omzet(begin, eind);
-                omzetrapportageService.AantalKlanten(begin, eind);
+                omzetrapportageService.Afzet(start, stop);
+                omzetrapportageService.Omzet(start, stop);
+                omzetrapportageService.AantalKlanten(start, stop);
 
                 lbl_Afzet.Text = omzetrapportageService.afzet.ToString();
                 lbl_Omzet.Text = omzetrapportageService.omzet.ToString();
@@ -458,6 +458,11 @@ namespace SomerenUI
         private void omzetrapportageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Omzetrapportage");
+        }
+
+        private void mocal_Begin_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
     }
 }
