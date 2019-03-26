@@ -21,7 +21,7 @@ namespace SomerenDAL
 
         public List<Omzetrapportage> Db_AantalKlanten()
         {
-            string query = "SELECT S.StudentNummer, C.Transactie_ID FROM Student AS S JOIN Consumeert AS C ON S.studentNummer = C.StudentNummer "; 
+            string query = "SELECT S.StudentNummer, C.Transactie_ID, C.VerkoopDatum FROM Student AS S JOIN Consumeert AS C ON S.studentNummer = C.StudentNummer "; 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -55,8 +55,7 @@ namespace SomerenDAL
                 {
                     StudentNummer = (int)dr["StudentNummer"],
                     transactieID = (int)dr["Transactie_ID"],
-
-
+                    VerkoopDatumDrankje = (string)dr["VerkoopDatum"]
                 };
                 omzetrapportage.Add(omzetrapport);
             }

@@ -27,16 +27,14 @@ namespace SomerenLogic
                 {
                     afzet += o.Aantal;
                 }
-                
             }
-
             return omzetrapportage;
         }
 
         public List<Omzetrapportage> Omzet(DateTime begin, DateTime eind)
         {
             List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AfzetOmzet();
-
+            
             foreach (Omzetrapportage o in omzetrapportage)
             {
                 DateTime verkoopdatum = DateTime.Parse(o.VerkoopDatumDrankje);
@@ -46,18 +44,45 @@ namespace SomerenLogic
                 }
                 
             }
-
             return omzetrapportage;
         }
 
         public List<Omzetrapportage> AantalKlanten(DateTime begin, DateTime eind)
         {
             List<Omzetrapportage> omzetrapportage = omzetrapportage_db.Db_AantalKlanten();
+            List<int> Klanten = new List<int>();
+            List<int> Klanten2 = new List<int>();
 
-            aantalKlanten = omzetrapportage.Count();
+            foreach (Omzetrapportage o in omzetrapportage)
+            {
+                DateTime verkoopdatum = DateTime.Parse(o.VerkoopDatumDrankje);
+                if (verkoopdatum >= begin && verkoopdatum <= eind)
+                {
+                    Klanten.Add(o.StudentNummer);
+                }
+            }
+
+            int count = 0;
+            for (int i = 0; i < Klanten.Count(); i++)
+            {
+                count = 0;
+                for (int e = i + 1; e < Klanten.Count(); e++)
+                {
+                    if(Klanten[i] == Klanten[e])
+                    {
+                        count++;
+                        
+                    }
+                }
+                if (count == 0)
+                {
+                    Klanten2.Add(Klanten[i]);
+                }
+            }
+
+            aantalKlanten = Klanten2.Count();
 
             return omzetrapportage;
         }
-
     }
 }
