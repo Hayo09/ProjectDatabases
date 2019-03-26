@@ -43,10 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="Drankje_DAO.cs" />
+    <Compile Include="Omzetrapportage_DAO.cs" />
     <Compile Include="Room_DAO.cs" />
     <Compile Include="Teacher_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student_DAO.cs" />
+    <Compile Include="Transactie_DAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SomerenModel\SomerenModel.csproj">

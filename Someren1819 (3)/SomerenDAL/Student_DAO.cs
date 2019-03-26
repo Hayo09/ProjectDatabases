@@ -20,6 +20,14 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public Student Db_Get_Student_By_Name(string naam)
+        {
+            string query = "SELECT StudentNummer, Naam, GeboorteDatum FROM Student WHERE Naam = '" + naam +  "'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            Student students = ReadTable(ExecuteSelectQuery(query, sqlParameters));
+            return students;
+        }
+
         private List<Student> ReadTables(DataTable dataTable)
         {
             List<Student> students = new List<Student>();
@@ -35,6 +43,18 @@ namespace SomerenDAL
                 students.Add(student);
             }
             return students;
+        }
+
+        private Student ReadTable(DataTable dataTable)
+        {
+            DataRow dr = dataTable.Rows[0];
+            Student student = new Student()
+            {
+                Number = (int)dr["StudentNummer"],
+                Name = (String)(dr["Naam"].ToString()),
+                BirthDate = (DateTime)(dr["GeboorteDatum"])
+            };
+            return student;
         }
 
     }

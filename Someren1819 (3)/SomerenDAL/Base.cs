@@ -73,7 +73,7 @@ namespace SomerenDAL
             }
         }
 
-
+        /* Test */
 
         /* For Select Queries */
         protected DataTable ExecuteSelectQuery(String query, params SqlParameter[] sqlParameters)
